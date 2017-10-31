@@ -3,7 +3,7 @@
 }
 
 #header {
-    background: #ccc;
+    background: #6d6d6d;
     height: 100px;
 }
 
@@ -14,40 +14,6 @@
     height: 100px;
 }
 
-nav {
-    float: left;
-    height: 100%;
-    width: 18%;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
-    background: #ccc;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul a {
-    text-decoration: none;
-}
-
-nav ul li {
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-nav ul li:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnavBtns {
-    color: #000000;
-    font-size: 17px;
-}
-
 footer {
     position: absolute;
     right: 0;
@@ -55,16 +21,11 @@ footer {
     left: 0;
     padding: 1rem;
     color: #ffffff;
-    background-color: #ccc;
+    background-color: #6d6d6d;
     text-align: center;
 }
 footer p {
     color: black;
-}
-
-.topnavBtns:active {
-    background-color: black;
-    color: white;
 }
 
 .urlList {
@@ -74,4 +35,47 @@ footer p {
 
 #urlLink {
     width: 400px;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.urlList {
+    text-align: center;
+    margin: 10px;
+}
+
+#homeTable, #adminTable {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.homeTD, .homeTH, .adminTD, .adminTH {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#addTable {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.addTD {
+    text-align: left;
+    padding: 8px;
+}
+
+#adminLoginTable {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.adminLoginTD, .adminLoginTH {
+    padding: 8px;
+    text-align: center;
 }

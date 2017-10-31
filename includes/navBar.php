@@ -19,6 +19,10 @@
     </ul>
 </nav>
 
+<?php
+include ("includes/footer.php");
+?>
+
 
 
 <center>

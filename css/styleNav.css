@@ -1,0 +1,23 @@
+#nav {
+    background-color: #6d6d6d;
+    text-align: center;
+}
+
+.mainBtns {
+    list-style: none;
+    display: inline-block;
+}
+
+.mainBtns .nav_button {
+    float: left;
+    margin: 0 20px;
+}
+
+.mainBtns .nav_button a {
+    color: white;
+}
+
+.mainBtns .nav_button a:hover {
+    color: black;
+    background-color: white;
+}

@@ -10,7 +10,7 @@
 
 <?php
 include ("includes/header.php");
-include ("includes/navBar.php");
+include ("includes/navBar2.php");
 include ("includes/footer.php");
 
 if (!isset($_GET["page"])) {
@@ -25,8 +25,17 @@ if (!isset($_GET["page"])) {
             include ("add_url.php");
             break;
         case "admin":
-            include ("admin.php");
+            include("admin.php");
             break;
+        case "delete_id":
+            include ("deleteID.php");
+            //echo "Testing 123";
+            break;
+        case "logout":
+            //$_SESSION['password'] = "";
+            session_unset();
+            session_destroy();
+            include ("home.php");
     }
 }
 

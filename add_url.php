@@ -11,10 +11,25 @@
 <?php
 $urlTitle = $urlLink = $category = $submitURLError = "";
 
-getinput();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
+
+    if (!empty($_POST["urlTitle"]))
+    {
+        // title is not empty
+        $urlTitle = checkInput($_POST["urlTitle"]);
+    }
+    if (!empty($_POST["urlLink"]))
+    {
+        // url is not empty
+        $urlLink = checkInput($_POST["urlLink"]);
+    }
+    if (!empty($_POST["category"]))
+    {
+        // category is not empty
+        $category = checkInput($_POST["category"]);
+    }
 
     if (!empty($urlTitle) && !empty($urlLink) && !empty($category))
     {
@@ -41,21 +56,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <h3 class="error"> <?php echo $submitURLError; ?> </h3>
 
 <form method="post" action="?page=addURL">
-    <table border="0">
+    <table id="addTable">
         <tr>
-            <td>Title: </td>
-            <td><input id="urlTitle" type="text" name="urlTitle" placeholder="Title of URL"></td>
+            <td class="addTD">Title: </td>
+            <td class="addTD"><input id="urlTitle" type="text" name="urlTitle" placeholder="Title of URL"></td>
         </tr>
         <tr>
-            <td>URL: </td>
-            <td><input id="urlLink" type="url" name="urlLink" placeholder="URL / Link"></td>
+            <td class="addTD">URL: </td>
+            <td class="addTD"><input id="urlLink" type="url" name="urlLink" placeholder="URL / Link"></td>
         </tr>
         <tr>
-            <td>Category: </td>
-            <td><input id="category" type="text" name="category" placeholder="Category"></td>
+            <td class="addTD">Category: </td>
+            <td class="addTD"><input id="category" type="text" name="category" placeholder="Category"></td>
         </tr>
         <tr>
-            <td><input type="submit" class="submitUrlBtn" class="submitUrl" name="submitUrl" value="Save URL"></td>
+            <td class="addTD"><input type="submit" class="submitUrlBtn" class="submitUrl" name="submitUrl" value="Save URL"></td>
         </tr>
     </table>
 </form>
@@ -66,17 +81,17 @@ function getinput()
 {
     if (!empty($_POST["urlTitle"]))
     {
-        // note title is not empty
+        // title is not empty
         $urlTitle = checkInput($_POST["urlTitle"]);
     }
     if (!empty($_POST["urlLink"]))
     {
-        // note title is not empty
+        // url is not empty
         $urlLink = checkInput($_POST["urlLink"]);
     }
     if (!empty($_POST["category"]))
     {
-        // note title is not empty
+        // category is not empty
         $category = checkInput($_POST["category"]);
     }
 }
