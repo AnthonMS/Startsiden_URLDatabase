@@ -1,0 +1,77 @@
+.error {
+    color: #FF0000;
+}
+
+#header {
+    background: #ccc;
+    height: 100px;
+}
+
+#headerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+}
+
+nav {
+    float: left;
+    height: 100%;
+    width: 18%;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    background: #ccc;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+nav ul li:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnavBtns {
+    color: #000000;
+    font-size: 17px;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #ccc;
+    text-align: center;
+}
+footer p {
+    color: black;
+}
+
+.topnavBtns:active {
+    background-color: black;
+    color: white;
+}
+
+.urlList {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#urlLink {
+    width: 400px;
+}
